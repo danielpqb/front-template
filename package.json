@@ -1,0 +1,63 @@
+{
+  "name": "vite-react-template",
+  "description": "This is a React + Vite template.",
+  "version": "0.1.0",
+  "private": true,
+  "author": {
+    "name": "Daniel Pereira Queiroz Barros",
+    "email": "danielpqb@gmail.com",
+    "url": "https://github.com/danielpqb"
+  },
+  "bugs": {
+    "url": "https://github.com/danielpqb/vite-template/issues",
+    "email": "danielpqb@gmail.com"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build:dev": "npx rimraf dist && tsup ./src",
+    "serve": "vite preview",
+    "test": "vitest",
+    "lint": "eslint src --max-warnings=0",
+    "typecheck": "tsc --project tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "animate.css": "^4.1.1",
+    "axios": "^1.2.3",
+    "promise-retry": "^2.0.1",
+    "react": "^18.2.0",
+    "react-animate-with-css": "^1.2.1",
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.7.1",
+    "react-loader-spinner": "^5.3.4",
+    "react-router-dom": "^6.6.2",
+    "styled-components": "^5.3.6"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.18",
+    "@types/promise-retry": "^1.1.3",
+    "@types/react": "^18.0.27",
+    "@types/react-dom": "^18.0.10",
+    "@types/styled-components": "^5.1.26",
+    "@typescript-eslint/eslint-plugin": "^5.48.2",
+    "@typescript-eslint/parser": "^5.48.2",
+    "@vitejs/plugin-react": "^3.0.1",
+    "eslint": "^8.32.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-config-standard-with-typescript": "^23.0.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-n": "^15.6.1",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-react": "^7.32.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.3",
+    "prettier": "2.8.1",
+    "rimraf": "^5.0.1",
+    "tsup": "^7.1.0",
+    "tsx": "^3.12.7",
+    "typescript": "^4.9.4",
+    "vite": "^4.0.4",
+    "vite-tsconfig-paths": "^4.0.3"
+  }
+}
