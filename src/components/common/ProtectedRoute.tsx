@@ -1,15 +1,15 @@
-import { Navigate, Outlet } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 
 export default function ProtectedRoute({
   token,
   noTokenPath = "/",
-  children,
+  element,
 }: {
   token: string | null;
   noTokenPath?: string;
-  children?: React.ReactElement;
+  element: React.ReactElement;
 }) {
-  if (token) {
+  if (!token) {
     return (
       <Navigate
         to={noTokenPath}
@@ -18,5 +18,5 @@ export default function ProtectedRoute({
     );
   }
 
-  return children ? children : <Outlet />;
+  return element;
 }

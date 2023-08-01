@@ -37,22 +37,19 @@ export default function App() {
               element={<SignUp />}
             />
             <Route
+              path="/user"
               element={
                 <ProtectedRoute
                   token={token}
                   noTokenPath={"/"}
+                  element={<></>}
                 />
               }
-            >
-              <Route
-                path="/user"
-                element={<></>}
-              />
-              <Route
-                path="*"
-                element={<Navigate to="/sign-in" />}
-              />
-            </Route>
+            />
+            <Route
+              path="*"
+              element={<Navigate to="/" />}
+            />
           </Routes>
         </BrowserRouter>
       </Background>

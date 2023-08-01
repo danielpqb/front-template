@@ -70,11 +70,6 @@ export default function Home() {
 
 const Container = styled.div`
   & {
-    border: 5px solid var(--background-border-color);
-    border-radius: 5px;
-
-    background-color: black;
-
     flex-direction: column;
 
     gap: 20px;

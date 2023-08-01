@@ -5,6 +5,7 @@ import App from "./App";
 import { AppContextProvider } from "./contexts/AppContext";
 import { GlobalStyle } from "global-styles";
 import { AnimationContextProvider } from "react-animate-with-css";
+import { QueryContextProvider } from "contexts/QueryContext";
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
@@ -13,7 +14,9 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
     <AppContextProvider>
       <UserContextProvider>
         <AnimationContextProvider>
-          <App />
+          <QueryContextProvider>
+            <App />
+          </QueryContextProvider>
         </AnimationContextProvider>
       </UserContextProvider>
     </AppContextProvider>
