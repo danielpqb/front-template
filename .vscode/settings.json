@@ -28,5 +28,6 @@
   //Editor
   "editor.formatOnSave": false,
   "editor.codeActionsOnSave": ["source.formatDocument", "source.fixAll.eslint"],
+
   "typescript.updateImportsOnFileMove.enabled": "always"
 }

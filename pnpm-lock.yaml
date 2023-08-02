@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@tanstack/react-query':
-    specifier: ^4.32.0
-    version: 4.32.0(react-dom@18.2.0)(react@18.2.0)
+    specifier: ^4.32.1
+    version: 4.32.1(react-dom@18.2.0)(react@18.2.0)
   animate.css:
     specifier: ^4.1.1
     version: 4.1.1
@@ -63,7 +63,7 @@ devDependencies:
     version: 5.62.0(eslint@8.46.0)(typescript@4.9.5)
   '@vitejs/plugin-react':
     specifier: ^3.1.0
-    version: 3.1.0(vite@4.4.7)
+    version: 3.1.0(vite@4.4.8)
   eslint:
     specifier: ^8.46.0
     version: 8.46.0
@@ -104,8 +104,8 @@ devDependencies:
     specifier: ^5.0.1
     version: 5.0.1
   tsup:
-    specifier: ^7.1.0
-    version: 7.1.0(typescript@4.9.5)
+    specifier: ^7.2.0
+    version: 7.2.0(typescript@4.9.5)
   tsx:
     specifier: ^3.12.7
     version: 3.12.7
@@ -113,11 +113,11 @@ devDependencies:
     specifier: ^4.9.5
     version: 4.9.5
   vite:
-    specifier: ^4.4.7
-    version: 4.4.7(@types/node@18.17.1)
+    specifier: ^4.4.8
+    version: 4.4.8(@types/node@18.17.1)
   vite-tsconfig-paths:
     specifier: ^4.2.0
-    version: 4.2.0(typescript@4.9.5)(vite@4.4.7)
+    version: 4.2.0(typescript@4.9.5)(vite@4.4.8)
 
 packages:
 
@@ -911,12 +911,12 @@ packages:
     engines: {node: '>=14'}
     dev: false
 
-  /@tanstack/query-core@4.32.0:
-    resolution: {integrity: sha512-ei4IYwL2kmlKSlCw9WgvV7PpXi0MiswVwfQRxawhJA690zWO3dU49igaQ/UMTl+Jy9jj9dK5IKAYvbX7kUvviQ==}
+  /@tanstack/query-core@4.32.1:
+    resolution: {integrity: sha512-VEAGHboOFWN/bvf/7cCoeLQfld0AA8n0V/kfc77W+FvxnnSwJufEh6gfjqpX5bRE/DEYfYDYdNtuL3KM+lIs8Q==}
     dev: false
 
-  /@tanstack/react-query@4.32.0(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-B8WUMcByYAH9500ENejDCATOmEZhqjtS9wsfiQ3BNa+s+yAynY8SESI8WWHhSqUmjd0pmCSFRP6BOUGSda3QXA==}
+  /@tanstack/react-query@4.32.1(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-lPTfOq6bR6DorPaS018gTMd3zs8r06tlERiVY6BRP9SnDkkl4ckqeANava/jPLWrSZP+EA15loQUTmvZs6k2GA==}
     peerDependencies:
       react: ^16.8.0 || ^17.0.0 || ^18.0.0
       react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
@@ -927,7 +927,7 @@ packages:
       react-native:
         optional: true
     dependencies:
-      '@tanstack/query-core': 4.32.0
+      '@tanstack/query-core': 4.32.1
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
       use-sync-external-store: 1.2.0(react@18.2.0)
@@ -1126,7 +1126,7 @@ packages:
       eslint-visitor-keys: 3.4.2
     dev: true
 
-  /@vitejs/plugin-react@3.1.0(vite@4.4.7):
+  /@vitejs/plugin-react@3.1.0(vite@4.4.8):
     resolution: {integrity: sha512-AfgcRL8ZBhAlc3BFdigClmTUMISmmzHn7sB2h9U1odvc5U/MjWXsAaz18b/WoppUTDBzxOJwo2VdClfUcItu9g==}
     engines: {node: ^14.18.0 || >=16.0.0}
     peerDependencies:
@@ -1137,7 +1137,7 @@ packages:
       '@babel/plugin-transform-react-jsx-source': 7.22.5(@babel/core@7.22.9)
       magic-string: 0.27.0
       react-refresh: 0.14.0
-      vite: 4.4.7(@types/node@18.17.1)
+      vite: 4.4.8(@types/node@18.17.1)
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -1378,7 +1378,7 @@ packages:
     hasBin: true
     dependencies:
       caniuse-lite: 1.0.30001518
-      electron-to-chromium: 1.4.478
+      electron-to-chromium: 1.4.481
       node-releases: 2.0.13
       update-browserslist-db: 1.0.11(browserslist@4.21.10)
 
@@ -1628,8 +1628,8 @@ packages:
     resolution: {integrity: sha512-I88TYZWc9XiYHRQ4/3c5rjjfgkjhLyW2luGIheGERbNQ6OY7yTybanSpDXZa8y7VUP9YmDcYa+eyq4ca7iLqWA==}
     dev: true
 
-  /electron-to-chromium@1.4.478:
-    resolution: {integrity: sha512-qjTA8djMXd+ruoODDFGnRCRBpID+AAfYWCyGtYTNhsuwxI19s8q19gbjKTwRS5z/LyVf5wICaIiPQGLekmbJbA==}
+  /electron-to-chromium@1.4.481:
+    resolution: {integrity: sha512-25DitMKGaWUPjv3kCt2H3UqgMhmdN+ufG+PoSjnQtheR64Dvo75RbojLPzUmnwrEuLEzR5YrbTzOUq9DtnTUUw==}
 
   /emoji-regex@8.0.0:
     resolution: {integrity: sha512-MSjYzcWNOA0ewAHpz0MxpYFvwg6yjy1NG3xteoqz644VCo/RPgnr1/GGt+ic3iJTzQ8Eu3TdM14SawnVUmGE6A==}
@@ -3779,8 +3779,8 @@ packages:
     resolution: {integrity: sha512-t0hLfiEKfMUoqhG+U1oid7Pva4bbDPHYfJNiB7BiIjRkj1pyC++4N3huJfqY6aRH6VTB0rvtzQwjM4K6qpfOig==}
     dev: true
 
-  /tsup@7.1.0(typescript@4.9.5):
-    resolution: {integrity: sha512-mazl/GRAk70j8S43/AbSYXGgvRP54oQeX8Un4iZxzATHt0roW0t6HYDVZIXMw0ZQIpvr1nFMniIVnN5186lW7w==}
+  /tsup@7.2.0(typescript@4.9.5):
+    resolution: {integrity: sha512-vDHlczXbgUvY3rWvqFEbSqmC1L7woozbzngMqTtL2PGBODTtWlRwGDDawhvWzr5c1QjKe4OAKqJGfE1xeXUvtQ==}
     engines: {node: '>=16.14'}
     hasBin: true
     peerDependencies:
@@ -3930,7 +3930,7 @@ packages:
       react: 18.2.0
     dev: false
 
-  /vite-tsconfig-paths@4.2.0(typescript@4.9.5)(vite@4.4.7):
+  /vite-tsconfig-paths@4.2.0(typescript@4.9.5)(vite@4.4.8):
     resolution: {integrity: sha512-jGpus0eUy5qbbMVGiTxCL1iB9ZGN6Bd37VGLJU39kTDD6ZfULTTb1bcc5IeTWqWJKiWV5YihCaibeASPiGi8kw==}
     peerDependencies:
       vite: '*'
@@ -3941,14 +3941,14 @@ packages:
       debug: 4.3.4(supports-color@5.5.0)
       globrex: 0.1.2
       tsconfck: 2.1.2(typescript@4.9.5)
-      vite: 4.4.7(@types/node@18.17.1)
+      vite: 4.4.8(@types/node@18.17.1)
     transitivePeerDependencies:
       - supports-color
       - typescript
     dev: true
 
-  /vite@4.4.7(@types/node@18.17.1):
-    resolution: {integrity: sha512-6pYf9QJ1mHylfVh39HpuSfMPojPSKVxZvnclX1K1FyZ1PXDOcLBibdq5t1qxJSnL63ca8Wf4zts6mD8u8oc9Fw==}
+  /vite@4.4.8(@types/node@18.17.1):
+    resolution: {integrity: sha512-LONawOUUjxQridNWGQlNizfKH89qPigK36XhMI7COMGztz8KNY0JHim7/xDd71CZwGT4HtSRgI7Hy+RlhG0Gvg==}
     engines: {node: ^14.18.0 || >=16.0.0}
     hasBin: true
     peerDependencies:
