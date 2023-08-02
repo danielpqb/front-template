@@ -1,11 +1,11 @@
-import UserContextProvider from "contexts/UserContext";
+import UserContextProvider from "external/contexts/UserContext";
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
-import { AppContextProvider } from "./contexts/AppContext";
+import { AppContextProvider } from "./external/contexts/AppContext";
 import { GlobalStyle } from "global-styles";
 import { AnimationContextProvider } from "react-animate-with-css";
-import { QueryContextProvider } from "contexts/QueryContext";
+import { QueryContextProvider } from "external/contexts/QueryContext";
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
