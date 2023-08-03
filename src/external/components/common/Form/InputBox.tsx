@@ -30,29 +30,28 @@ export default function InputBox({
   useEffect(() => {
     if (value?.match(regex as RegExp) || value?.length === 0) {
       setIsValidPattern(true);
-    }
-    else {
+    } else {
       setIsValidPattern(false);
     }
   }, [value, regex]);
 
   if (hasIcon) {
     switch (name) {
-    case "name":
-      hasIcon = <MdPerson />;
-      break;
-    case "email":
-      hasIcon = <MdOutlineEmail />;
-      break;
-    case "password":
-      hasIcon = <IoKeyOutline />;
-      break;
-    case "imageUrl":
-      hasIcon = <MdImage />;
-      break;
-    default:
-      hasIcon = <AiOutlineFileText />;
-      break;
+      case "name":
+        hasIcon = <MdPerson />;
+        break;
+      case "email":
+        hasIcon = <MdOutlineEmail />;
+        break;
+      case "password":
+        hasIcon = <IoKeyOutline />;
+        break;
+      case "imageUrl":
+        hasIcon = <MdImage />;
+        break;
+      default:
+        hasIcon = <AiOutlineFileText />;
+        break;
     }
   }
 

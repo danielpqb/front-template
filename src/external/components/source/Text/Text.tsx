@@ -15,14 +15,14 @@ export default function Text({
 
   let typeStyle = {} as React.CSSProperties;
   switch (styleType) {
-  case "button":
-    typeStyle = {
-      color: "#ffffff",
-      fontStyle: "normal",
-      fontWeight: "500",
-      fontSize: "20px",
-    };
-    break;
+    case "button":
+      typeStyle = {
+        color: "#ffffff",
+        fontStyle: "normal",
+        fontWeight: "500",
+        fontSize: "20px",
+      };
+      break;
   }
 
   style = { ...typeStyle, ...style };

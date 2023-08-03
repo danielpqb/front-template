@@ -21,9 +21,9 @@ export default function Button({
 
   let typeStyle = {} as React.CSSProperties;
   switch (styleType) {
-  case "1":
-    typeStyle = {};
-    break;
+    case "1":
+      typeStyle = {};
+      break;
   }
   style = { ...typeStyle, ...style };
 

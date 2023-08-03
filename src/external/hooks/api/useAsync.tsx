@@ -33,8 +33,7 @@ export default function useAsync(handler: any, immediate = false, retry = false)
         setData(data);
         setLoading(false);
         return data;
-      }
-      catch (err) {
+      } catch (err) {
         setError(err as null);
         setLoading(false);
         throw err;

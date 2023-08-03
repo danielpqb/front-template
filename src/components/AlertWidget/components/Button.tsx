@@ -20,9 +20,9 @@ export default function Button({
 
   let flagStyle = {} as React.CSSProperties;
   switch (styleFlag) {
-  case "1":
-    flagStyle = {};
-    break;
+    case "1":
+      flagStyle = {};
+      break;
   }
   style = { ...flagStyle, ...style };
 

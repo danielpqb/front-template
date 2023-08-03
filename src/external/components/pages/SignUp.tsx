@@ -40,8 +40,7 @@ export default function SignUp() {
       setIsSubmitDisabled(false);
 
       navigate("/");
-    }
-    catch (error) {
+    } catch (error) {
       setAlert({
         show: true,
         message: "User creation failed!",
