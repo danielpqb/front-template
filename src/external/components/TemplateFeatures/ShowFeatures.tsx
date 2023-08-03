@@ -1,11 +1,11 @@
 import { useAnimate, Animation } from "react-animate-with-css";
 import styled from "styled-components";
 
-import { useAppContext } from "../../contexts/AppContext";
 import FeatureBox from "./FeatureBox";
+import { useAlertWidgetContext } from "components/AlertWidget/contexts/AlertWidget";
 
 export default function ShowFeatures() {
-  const { setAlert } = useAppContext();
+  const { setAlert } = useAlertWidgetContext();
 
   const { animate } = useAnimate();
 

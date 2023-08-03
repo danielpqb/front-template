@@ -2,12 +2,12 @@ export function filterInput({ value, type, size }: { value: string; type: "only-
   let resp = String(value);
 
   switch (type) {
-  case "only-numbers":
-    resp = resp.replaceAll(/\D/g, "");
-    break;
+    case "only-numbers":
+      resp = resp.replaceAll(/\D/g, "");
+      break;
 
-  default:
-    break;
+    default:
+      break;
   }
 
   if (size && size > 0) {

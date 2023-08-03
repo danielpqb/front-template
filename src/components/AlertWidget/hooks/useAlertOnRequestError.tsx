@@ -1,5 +1,5 @@
-import { useAppContext } from "../../../../contexts/AppContext";
-import { Error } from "../../../../helpers/request";
+import { useAppContext } from "../../../external/contexts/AppContext";
+import { Error } from "../../../external/helpers/request";
 
 export async function useAlertOnRequestError(error: Error) {
   const { setAlert } = useAppContext();

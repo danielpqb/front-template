@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-import { useAppContext } from "../../../contexts/AppContext";
 import Layout from "./Layout";
 import * as AlertTypes from "./types";
 import Blur from "./Blur";
@@ -9,9 +8,10 @@ import { defineProps } from "./functions";
 import Message from "./Message";
 import { useEffect } from "react";
 import Buttons from "./Buttons";
+import { useAlertWidgetContext } from "components/AlertWidget/contexts/AlertWidget";
 
 export default function Alert() {
-  const { alert, setAlert } = useAppContext();
+  const { alert, setAlert } = useAlertWidgetContext();
 
   useEffect(() => {
     defineProps(alert, setAlert);

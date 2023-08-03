@@ -1,9 +1,11 @@
-import Button from "external/components/source/Button/Button";
+import Button from "components/Button/Button";
+import { useStyledComponentsThemeContext } from "global/contexts/StyledComponentsTheme/StyledComponentsTheme";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 
 export default function ShowButtons() {
   const navigate = useNavigate();
+  const { theme, toggleTheme } = useStyledComponentsThemeContext();
 
   return (
     <Container>
@@ -27,6 +29,13 @@ export default function ShowButtons() {
         }}
       >
         Register Page
+      </Button>
+      <Button
+        onClick={() => {
+          toggleTheme();
+        }}
+      >
+        Theme ({theme.title})
       </Button>
     </Container>
   );

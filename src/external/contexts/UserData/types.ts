@@ -12,9 +12,3 @@ export type UserData = {
   photoUrl: string;
   createdAt: string;
 };
-
-export type OAuthData = {
-  name: string;
-  email: string;
-  photoUrl: string;
-};

@@ -1,4 +1,4 @@
-import { useUserContext } from "external/contexts/UserContext";
+import { useUserContext } from "external/contexts/UserData/UserData";
 import { useMemo } from "react";
 import { UserData } from "external/types/user-types";
 

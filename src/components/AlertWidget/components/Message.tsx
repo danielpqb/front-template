@@ -1,9 +1,9 @@
-import { useAppContext } from "external/contexts/AppContext";
 import styled from "styled-components";
 import { MessageStyleType } from "./types";
+import { useAlertWidgetContext } from "components/AlertWidget/contexts/AlertWidget";
 
 export default function Message() {
-  const { alert } = useAppContext();
+  const { alert } = useAlertWidgetContext();
 
   const { message = "Alert!", messageStyle } = alert;
 
