@@ -1,15 +1,16 @@
 import { useAppContext } from "external/contexts/AppContext";
 import styled from "styled-components";
+import { MessageStyleType } from "./types";
 
 export default function Message() {
   const { alert } = useAppContext();
 
   const { message = "Alert!", messageStyle } = alert;
 
-  return <Container style={messageStyle}>{message}</Container>;
+  return <Container messageStyle={messageStyle}>{message}</Container>;
 }
 
-const Container = styled.div.attrs((messageStyle) => messageStyle)`
+const Container = styled.div<{ messageStyle: Partial<MessageStyleType> }>`
   && {
     flex-wrap: wrap;
     overflow-y: auto;
@@ -28,5 +29,7 @@ const Container = styled.div.attrs((messageStyle) => messageStyle)`
 
     min-height: 15vh;
     height: fit-content;
+
+    ${({ messageStyle }) => messageStyle}
   }
 `;

@@ -2,12 +2,12 @@ import { ReactNode } from "react";
 import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 import styled from "styled-components";
 
-import ProtectedRoute from "./external/components/common/ProtectedRoute";
+import ProtectedRoute from "./external/components/common/ProtectedRoute/ProtectedRoute";
 
 import { useAppContext } from "./external/contexts/AppContext";
 import Home from "./external/components/pages/Home";
-import Alert from "external/components/common/Alert/Alert";
 import ShowFeatures from "external/components/TemplateFeatures/ShowFeatures";
+import Alert from "external/components/common/Alert/Alert";
 import Counter from "external/components/source/Counter/Counter";
 import SignIn from "external/components/pages/SignIn";
 import SignUp from "external/components/pages/SignUp";

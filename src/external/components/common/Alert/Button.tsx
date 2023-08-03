@@ -7,24 +7,24 @@ export default function Button({
   children,
   disabled,
   style,
-  styleType,
+  styleFlag,
   onClick,
 }: {
   children: ReactNode;
   disabled?: boolean;
   style?: React.CSSProperties;
-  styleType?: string;
+  styleFlag?: string;
   onClick: React.MouseEventHandler<HTMLButtonElement>;
 }) {
   style = removeUndefinedProperties(style);
 
-  let typeStyle = {} as React.CSSProperties;
-  switch (styleType) {
+  let flagStyle = {} as React.CSSProperties;
+  switch (styleFlag) {
   case "1":
-    typeStyle = {};
+    flagStyle = {};
     break;
   }
-  style = { ...typeStyle, ...style };
+  style = { ...flagStyle, ...style };
 
   return (
     <Container
@@ -78,7 +78,7 @@ export default function Button({
   );
 }
 
-const Container = styled.button.attrs((style) => style)`
+const Container = styled.button`
   & {
     position: relative;
     overflow: hidden;
@@ -100,16 +100,6 @@ const Container = styled.button.attrs((style) => style)`
 
   &:active {
     transform: scale(0.95);
-  }
-`;
-
-const Background = styled.div<{ backgroundColor: string; filter: string; border: string }>`
-  & {
-    position: absolute;
-    z-index: -1;
-    background: ${({ backgroundColor }) => (backgroundColor ? backgroundColor : "#505050")};
-    filter: ${({ filter }) => (filter ? filter : "")};
-    border: ${({ border }) => (border ? border : "")};
   }
 `;
 

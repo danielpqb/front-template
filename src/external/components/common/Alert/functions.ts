@@ -8,7 +8,7 @@ const defaultStyle = {
   border: "5px solid rgba(0, 0, 0, 0.2)",
 };
 
-export function defineProps(alertProps: Alert) {
+export function defineProps(alertProps: Alert, setAlert: React.Dispatch<React.SetStateAction<Partial<Alert>>>) {
   const receivedProps = { ...alertProps };
   const props = { ...defaultProps, ...receivedProps };
 
@@ -16,7 +16,7 @@ export function defineProps(alertProps: Alert) {
   const style = { ...defaultStyle, ...receivedStyle };
   defineStyle(props, style);
 
-  return { ...props, style };
+  setAlert({ ...props, style });
 }
 
 function defineStyle(props: Alert, style: StyleType) {

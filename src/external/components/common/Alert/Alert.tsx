@@ -1,78 +1,24 @@
 import styled from "styled-components";
 
 import { useAppContext } from "../../../contexts/AppContext";
-import Button from "./Button";
-import Message from "./Message";
 import Layout from "./Layout";
 import * as AlertTypes from "./types";
-import { defineProps } from "./functions";
 import Blur from "./Blur";
 import IonIcon from "./IonIcon";
+import { defineProps } from "./functions";
+import Message from "./Message";
+import { useEffect } from "react";
+import Buttons from "./Buttons";
 
 export default function Alert() {
   const { alert, setAlert } = useAppContext();
 
-  const { type, style, doThis, icon } = defineProps(alert);
+  useEffect(() => {
+    defineProps(alert, setAlert);
+  }, []);
 
-  let renderButtons;
-  switch (type) {
-  case "ok-cancel":
-    renderButtons = (
-      <>
-        <Button
-          style={{
-            backgroundColor: style.mainColor,
-            border: "1px solid rgba(0, 0, 0, 0.1)",
-            boxShadow: "2px 4px 10px rgba(0, 0, 0, 0.3)",
-            marginTop: "10px",
-          }}
-          onClick={() => {
-            doThis();
-            setAlert({});
-          }}
-        >
-            Ok
-        </Button>
-
-        <Button
-          style={{
-            backgroundColor: style.mainColor,
-            border: "1px solid rgba(0, 0, 0, 0.1)",
-            boxShadow: "2px 4px 10px rgba(0, 0, 0, 0.3)",
-            marginTop: "10px",
-            filter: "grayscale(100%) invert(15%)",
-          }}
-          onClick={() => {
-            setAlert({});
-          }}
-        >
-            Cancel
-        </Button>
-      </>
-    );
-    break;
-
-  default:
-    renderButtons = (
-      <>
-        <Button
-          style={{
-            backgroundColor: style.mainColor,
-            border: "1px solid rgba(0, 0, 0, 0.1)",
-            boxShadow: "2px 4px 10px rgba(0, 0, 0, 0.3)",
-            marginTop: "10px",
-          }}
-          onClick={() => {
-            doThis();
-            setAlert({});
-          }}
-        >
-            Ok
-        </Button>
-      </>
-    );
-    break;
-  }
+  if (!alert?.style || !alert?.icon) return;
+  const { style, icon } = alert;
 
   return (
     <>
@@ -80,7 +26,6 @@ export default function Alert() {
 
       <Container alertStyle={style as AlertTypes.StyleType}>
         <Layout alertStyle={style as AlertTypes.StyleType} />
-
         <IonIcon
           name={icon}
           style={{
@@ -90,7 +35,7 @@ export default function Alert() {
           }}
           divStyle={{
             position: "absolute",
-            top: `-${style.iconSize / 2 - 5}px`,
+            top: `-${(style.iconSize as any) / 2 - 5}px`,
             width: "fit-content",
             height: "fit-content",
           }}
@@ -98,7 +43,7 @@ export default function Alert() {
 
         <Message />
 
-        {renderButtons}
+        <Buttons />
       </Container>
     </>
   );

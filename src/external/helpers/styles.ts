@@ -1,4 +1,3 @@
-// eslint-disable-next-line @typescript-eslint/naming-convention
 interface CSSPropertiesWithIndexSignature extends React.CSSProperties {
   [key: string]: React.CSSProperties[keyof React.CSSProperties];
 }
