@@ -1,14 +1,18 @@
 import { Alert, StyleType } from "./types";
 
-const defaultProps = { type: "ok", doThis: () => {}, icon: "checkmark-circle" };
-const defaultStyle = {
+const defaultStyle: StyleType = {
   mainColor: "rgb(0, 80, 40)",
   iconSize: 80,
   backgroundColor: "rgb(220, 220, 220)",
   border: "5px solid rgba(0, 0, 0, 0.2)",
 };
+const defaultProps = {
+  type: "ok",
+  doThis: () => {},
+  icon: "checkmark-circle",
+};
 
-export function defineProps(alertProps: Alert, setAlert: React.Dispatch<React.SetStateAction<Partial<Alert>>>) {
+export function defineProps(alertProps: Alert) {
   const receivedProps = { ...alertProps };
   const props = { ...defaultProps, ...receivedProps };
 
@@ -16,7 +20,7 @@ export function defineProps(alertProps: Alert, setAlert: React.Dispatch<React.Se
   const style = { ...defaultStyle, ...receivedStyle };
   defineStyle(props, style);
 
-  setAlert({ ...props, style });
+  return { ...props, style };
 }
 
 function defineStyle(props: Alert, style: StyleType) {

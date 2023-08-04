@@ -21,7 +21,11 @@ export default function CheckBox({
       }}
       color={color}
     >
-      {isChecked ? <BiCheckboxSquare size={size} /> : <BiCheckbox size={size} />}
+      {isChecked ? (
+        <BiCheckboxSquare size={size} />
+      ) : (
+        <BiCheckbox size={size} />
+      )}
     </Container>
   );
 }

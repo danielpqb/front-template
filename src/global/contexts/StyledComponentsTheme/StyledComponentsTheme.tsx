@@ -11,7 +11,11 @@ export const useStyledComponentsThemeContext = () => {
   return useContext(StyledComponentsThemeContext);
 };
 
-export function StyledComponentsThemeContextProvider({ children }: { children: ReactNode }) {
+export function StyledComponentsThemeContextProvider({
+  children,
+}: {
+  children: ReactNode;
+}) {
   const storageValue = localStorage.getItem("theme");
   const initialTheme = storageValue === "light" ? light : dark;
 

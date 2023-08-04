@@ -1,4 +1,12 @@
-export function filterInput({ value, type, size }: { value: string; type: "only-numbers"; size?: number }) {
+export function filterInput({
+  value,
+  type,
+  size,
+}: {
+  value: string;
+  type: "only-numbers";
+  size?: number;
+}) {
   let resp = String(value);
 
   switch (type) {

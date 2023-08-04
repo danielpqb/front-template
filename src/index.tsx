@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
-import { GlobalStyle } from "global/styles/global-styles";
+import { GlobalStyle } from "global/styles/reset-css";
 import { AnimationContextProvider } from "react-animate-with-css";
 import { ReactQueryContextProvider } from "global/contexts/ReactQuery/ReactQuery";
 import { StyledComponentsThemeContextProvider } from "global/contexts/StyledComponentsTheme/StyledComponentsTheme";

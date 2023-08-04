@@ -2,7 +2,10 @@ import { getUserDataByToken } from "external/services/user-services";
 import useAsync from "../useAsync";
 import useToken from "../useToken";
 
-export default function useUserData(config?: { immediate?: boolean; retry?: boolean }) {
+export default function useUserData(config?: {
+  immediate?: boolean;
+  retry?: boolean;
+}) {
   const token = useToken();
   const configs = { ...config };
 
@@ -15,7 +18,11 @@ export default function useUserData(config?: { immediate?: boolean; retry?: bool
     loading: userDataLoading,
     error: userDataError,
     act: fetchUserData,
-  } = useAsync(() => getUserDataByToken(token), configs?.immediate, configs?.retry);
+  } = useAsync(
+    () => getUserDataByToken(token),
+    configs?.immediate,
+    configs?.retry
+  );
 
   return {
     userData,

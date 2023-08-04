@@ -10,6 +10,7 @@ import SignIn from "external/components/pages/SignIn";
 import SignUp from "external/components/pages/SignUp";
 import useToken from "external/hooks/api/useToken";
 import ShowButtons from "external/components/TemplateFeatures/ShowButtons";
+import { globalStyles } from "global/styles/global-styles";
 
 export default function App() {
   const token = useToken();
@@ -66,14 +67,9 @@ const Layer1 = styled.div`
   & {
     width: 100vw;
 
-    background-color: var(--background-color);
-
-    ${({ theme }) => {
-      return css`
-        & {
-          background-color: ${theme.colors.background};
-        }
-      `;
-    }}
+    background-color: ${({ theme }) =>
+      theme.title === "light"
+        ? globalStyles.colors.white100
+        : globalStyles.colors.black100};
   }
 `;

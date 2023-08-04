@@ -1,5 +1,5 @@
-import styled from "styled-components";
 import * as ionicons from "react-icons/io5";
+import { Container, Icon } from "./styles";
 
 export default function IonIcon({
   name,
@@ -24,21 +24,10 @@ export default function IonIcon({
   const DynamicIcon = ionicons[convertName() as keyof typeof ionicons];
 
   return (
-    <Container style={divStyle}>
-      <Icon style={style}>
+    <Container cssStyle={divStyle as React.CSSProperties}>
+      <Icon cssStyle={style as React.CSSProperties}>
         <DynamicIcon />
       </Icon>
     </Container>
   );
 }
-
-const Container = styled.div``;
-
-const Icon = styled.div`
-  * {
-    font-size: 20px;
-    color: rgb(125, 125, 125);
-
-    ${({ style }) => style as string}
-  }
-`;

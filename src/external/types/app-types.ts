@@ -5,5 +5,7 @@ export type AppStates = {
   alert: AlertTypes.Alert;
   setAlert: React.Dispatch<React.SetStateAction<Partial<AlertTypes.Alert>>>;
   counter: CouterTypes.Counter;
-  setCounter: React.Dispatch<React.SetStateAction<Partial<CouterTypes.Counter>>>;
+  setCounter: React.Dispatch<
+    React.SetStateAction<Partial<CouterTypes.Counter>>
+  >;
 };

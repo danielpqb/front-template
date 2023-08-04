@@ -21,4 +21,9 @@ export type StyleType = {
   border: string;
 };
 
-export type MessageStyleType = { color: string; fontSize: string; fontFamily: string; fontWeight: string };
+export type MessageStyleType = {
+  color: string;
+  fontSize: string;
+  fontFamily: string;
+  fontWeight: string;
+};

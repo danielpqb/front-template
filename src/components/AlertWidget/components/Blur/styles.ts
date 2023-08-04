@@ -1,10 +1,6 @@
 import styled from "styled-components";
 
-export default function Blur() {
-  return <Container></Container>;
-}
-
-const Container = styled.div`
+export const Container = styled.div`
   & {
     position: fixed;
     top: 0;

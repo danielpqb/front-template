@@ -1,5 +1,6 @@
 import React, { ReactNode } from "react";
 import { Container, LoadingDots, Text } from "./styles";
+import { StyleFlag } from "./types";
 
 export default function Button({
   children,
@@ -10,12 +11,11 @@ export default function Button({
   children: ReactNode;
   loading?: boolean;
   onClick: React.MouseEventHandler<HTMLButtonElement>;
-  styleFlag?: string;
-  theme?: string;
+  styleFlag?: StyleFlag;
 }) {
   return (
     <Container
-      loading={!!loading}
+      $loading={loading}
       onClick={loading ? () => {} : onClick}
       styleFlag={styleFlag}
     >
@@ -24,6 +24,7 @@ export default function Button({
           height="13"
           width="51"
           ariaLabel="three-dots-loading"
+          styleFlag={styleFlag}
         />
       ) : (
         <Text styleFlag={styleFlag}>{children}</Text>

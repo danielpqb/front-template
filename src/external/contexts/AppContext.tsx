@@ -13,5 +13,9 @@ export function AppContextProvider({ children }: { children: ReactNode }) {
 
   const states = { alert, setAlert, counter, setCounter };
 
-  return <AppContext.Provider value={states as AppStates}>{children}</AppContext.Provider>;
+  return (
+    <AppContext.Provider value={states as AppStates}>
+      {children}
+    </AppContext.Provider>
+  );
 }

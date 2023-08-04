@@ -10,7 +10,10 @@ export const regexErrors = {
     - Length from 3 to 20.`,
   },
 
-  userEmail: { pattern: /^[a-z0-9.]+@[a-z0-9]+\.[a-z]+(\.[a-z]+)?$/i, message: "Invalid email." },
+  userEmail: {
+    pattern: /^[a-z0-9.]+@[a-z0-9]+\.[a-z]+(\.[a-z]+)?$/i,
+    message: "Invalid email.",
+  },
 
   userPassword: {
     pattern: /^(?=.*[0-9])(?=.*[a-z]).{8,32}/i,
@@ -20,5 +23,8 @@ export const regexErrors = {
     - Length from 8 to 32.`,
   },
 
-  url: { pattern: /^http(s)?:\/\/.*/, message: "URL must have an 'http' or 'https' protocol." },
+  url: {
+    pattern: /^http(s)?:\/\/.*/,
+    message: "URL must have an 'http' or 'https' protocol.",
+  },
 };

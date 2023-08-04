@@ -1,14 +1,15 @@
 import { DefaultTheme } from "styled-components";
+import { globalStyles as gs } from "../global-styles";
 
 const theme: DefaultTheme = {
   title: "light",
 
   colors: {
-    primary: "rgb(198, 46, 101)",
-    secundary: "rgb(51, 51, 51)",
+    primary: gs.colors.black200,
+    secondary: gs.colors.pink100,
 
-    background: "rgb(255, 255, 255)",
-    text: "rgb(34, 34, 34)",
+    background: gs.colors.white100,
+    text: gs.colors.black100,
   },
 };
 

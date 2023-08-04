@@ -1,7 +1,13 @@
 import { ReactNode } from "react";
 import styled from "styled-components";
 
-export default function FeatureBox({ children, text }: { children: ReactNode; text: string }) {
+export default function FeatureBox({
+  children,
+  text,
+}: {
+  children: ReactNode;
+  text: string;
+}) {
   return (
     <Container>
       <div>{text}</div>

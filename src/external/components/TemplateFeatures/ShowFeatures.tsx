@@ -3,13 +3,18 @@ import styled from "styled-components";
 
 import FeatureBox from "./FeatureBox";
 import { useAlertWidgetContext } from "components/AlertWidget/contexts/AlertWidget";
+import Button from "components/Button/Button";
 
 export default function ShowFeatures() {
   const { setAlert } = useAlertWidgetContext();
 
   const { animate } = useAnimate();
 
-  const style = { width: "fit-content", height: "fit-content", padding: "10px 0px" };
+  const style = {
+    width: "fit-content",
+    height: "fit-content",
+    padding: "10px 0px",
+  };
 
   return (
     <Container>
@@ -59,7 +64,7 @@ export default function ShowFeatures() {
           animateIn={{ name: "backInUp", duration: 1000 }}
           style={style}
         >
-          <ShowAlert
+          <Button
             onClick={() => {
               setAlert({
                 show: true,
@@ -68,7 +73,7 @@ export default function ShowFeatures() {
             }}
           >
             Show Alert
-          </ShowAlert>
+          </Button>
         </Animation>
       </FeatureBox>
     </Container>

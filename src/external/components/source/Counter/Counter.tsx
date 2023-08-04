@@ -7,13 +7,23 @@ import { useAppContext } from "external/contexts/AppContext";
 export default function Counter() {
   const { counter, setCounter } = useAppContext();
 
-  const { doThisWhenOver = () => {}, inicialValue = 5000, tick = 2000 } = counter;
+  const {
+    doThisWhenOver = () => {},
+    inicialValue = 5000,
+    tick = 2000,
+  } = counter;
 
   useEffect(() => {
     if (inicialValue > 0) {
       const interval = setInterval(() => {
         setCounter((old) => {
-          return { ...old, inicialValue: Math.max((old as { inicialValue: number }).inicialValue - tick, 0) };
+          return {
+            ...old,
+            inicialValue: Math.max(
+              (old as { inicialValue: number }).inicialValue - tick,
+              0
+            ),
+          };
         });
       }, tick);
 

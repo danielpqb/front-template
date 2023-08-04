@@ -1,4 +1,6 @@
-import InputBox, { InputBoxProps } from "external/components/common/Form/InputBox";
+import InputBox, {
+  InputBoxProps,
+} from "external/components/common/Form/InputBox";
 import SubmitButton from "external/components/common/Form/SubmitButton";
 import styled from "styled-components";
 

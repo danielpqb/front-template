@@ -8,7 +8,11 @@ export const useReactQueryContext = () => {
 };
 
 const queryClient = new QueryClient();
-export function ReactQueryContextProvider({ children }: { children: ReactNode }) {
+export function ReactQueryContextProvider({
+  children,
+}: {
+  children: ReactNode;
+}) {
   return (
     <ReactQueryContext.Provider value={{}}>
       <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>

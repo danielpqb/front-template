@@ -1,7 +1,11 @@
 import { useState, useEffect } from "react";
 import { useRequestRetry } from "./useRequestRetry";
 
-export default function useAsync(handler: any, immediate = false, retry = false) {
+export default function useAsync(
+  handler: any,
+  immediate = false,
+  retry = false
+) {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(immediate);
   const [error, setError] = useState(null);

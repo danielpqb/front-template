@@ -8,8 +8,13 @@ export const useUserDataContext = () => {
   return useContext(UserDataContext);
 };
 
-export default function UserDataContextProvider({ children }: { children: ReactNode }) {
-  const { userData, userDataLoading, userDataError, fetchUserData } = useUserData({ immediate: true });
+export default function UserDataContextProvider({
+  children,
+}: {
+  children: ReactNode;
+}) {
+  const { userData, userDataLoading, userDataError, fetchUserData } =
+    useUserData({ immediate: true });
 
   const states = {
     userData,
@@ -17,5 +22,9 @@ export default function UserDataContextProvider({ children }: { children: ReactN
     userDataError,
     fetchUserData,
   };
-  return <UserDataContext.Provider value={states as UserStates}>{children}</UserDataContext.Provider>;
+  return (
+    <UserDataContext.Provider value={states as UserStates}>
+      {children}
+    </UserDataContext.Provider>
+  );
 }
