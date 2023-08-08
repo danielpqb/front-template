@@ -1,5 +1,3 @@
-import styled from "styled-components";
-import { MessageStyleType } from "../types";
 import { useAlertWidgetContext } from "components/AlertWidget/contexts/AlertWidget";
 import { Container } from "./styles";
 

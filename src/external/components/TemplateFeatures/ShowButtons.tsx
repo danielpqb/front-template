@@ -41,42 +41,6 @@ export default function ShowButtons() {
       >
         Theme ({theme.title})
       </Button>
-      <Button
-        loading={true}
-        styleFlag="simple"
-        onClick={() => {
-          navigate("/show-features");
-        }}
-      >
-        Show Features
-      </Button>
-      <Button
-        loading={true}
-        styleFlag="outline"
-        onClick={() => {
-          navigate("/sign-in");
-        }}
-      >
-        Login Page
-      </Button>
-      <Button
-        loading={true}
-        styleFlag="simple-rounded"
-        onClick={() => {
-          navigate("/sign-up");
-        }}
-      >
-        Register Page
-      </Button>
-      <Button
-        loading={true}
-        styleFlag="outline-rounded"
-        onClick={() => {
-          toggleTheme();
-        }}
-      >
-        Theme ({theme.title})
-      </Button>
     </Container>
   );
 }

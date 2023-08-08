@@ -1,11 +1,11 @@
 import Layout from "../Layout/Layout";
-import * as AlertTypes from "../types";
 import Blur from "../Blur/Blur";
 import IonIcon from "../IonIcon/IonIcon";
 import Message from "../Message/Message";
 import Buttons from "../Buttons/Buttons";
 import { useAlertWidgetContext } from "components/AlertWidget/contexts/AlertWidget";
 import { Container } from "./styles";
+import { StyleType } from "components/AlertWidget/types";
 
 export default function Alert() {
   const { alert } = useAlertWidgetContext();
@@ -15,8 +15,8 @@ export default function Alert() {
     <>
       <Blur />
 
-      <Container alertStyle={style as AlertTypes.StyleType}>
-        <Layout alertStyle={style as AlertTypes.StyleType} />
+      <Container alertStyle={style as StyleType}>
+        <Layout alertStyle={style as StyleType} />
         <IonIcon
           name={icon}
           style={{

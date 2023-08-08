@@ -1,5 +1,5 @@
+import { StyleType } from "components/AlertWidget/types";
 import styled from "styled-components";
-import { StyleType } from "../types";
 
 export const Container = styled.div<{ alertStyle: StyleType }>`
   & {

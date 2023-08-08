@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
 import ProtectedRoute from "./components/ProtectedRoute/ProtectedRoute";
 

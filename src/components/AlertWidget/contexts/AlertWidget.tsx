@@ -1,10 +1,4 @@
-import {
-  createContext,
-  useContext,
-  ReactNode,
-  useState,
-  useEffect,
-} from "react";
+import { createContext, useContext, ReactNode, useState } from "react";
 import { Alert as AlertType, AlertStates } from "../types";
 import Alert from "components/AlertWidget/components/Alert/Alert";
 import { defineProps } from "../components/functions";

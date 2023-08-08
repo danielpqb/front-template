@@ -1,5 +1,5 @@
+import { MessageStyleType } from "components/AlertWidget/types";
 import styled from "styled-components";
-import { MessageStyleType } from "../types";
 
 export const Container = styled.div<{
   messageStyle: Partial<MessageStyleType>;

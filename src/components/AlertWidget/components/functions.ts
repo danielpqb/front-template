@@ -1,4 +1,4 @@
-import { Alert, StyleType } from "./types";
+import { Alert, StyleType } from "../types";
 
 const defaultStyle: StyleType = {
   mainColor: "rgb(0, 80, 40)",
@@ -24,7 +24,7 @@ export function defineProps(alertProps: Alert) {
 }
 
 function defineStyle(props: Alert, style: StyleType) {
-  switch (props?.flag) {
+  switch (props?.styleFlag) {
     case "red":
       style.mainColor = "rgb(110, 0, 5)";
       style.backgroundColor = defaultStyle.backgroundColor;

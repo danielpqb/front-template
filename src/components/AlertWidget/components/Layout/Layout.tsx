@@ -1,4 +1,4 @@
-import { StyleType } from "../types";
+import { StyleType } from "components/AlertWidget/types";
 import { Background, HideBorder, IconBackground } from "./styles";
 
 export default function Layout({ alertStyle }: { alertStyle: StyleType }) {

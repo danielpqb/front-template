@@ -5,7 +5,7 @@ export type AlertStates = {
 
 export type Alert = {
   show: boolean;
-  flag: "red" | "green" | "blue" | "orange" | "yellow";
+  styleFlag: StyleFlag;
   type: "ok" | "ok-cancel";
   style: Partial<StyleType>;
   messageStyle: Partial<MessageStyleType>;
@@ -13,6 +13,8 @@ export type Alert = {
   message: string;
   doThis: () => void;
 };
+
+export type StyleFlag = "red" | "green" | "blue" | "orange" | "yellow";
 
 export type StyleType = {
   mainColor: string;
